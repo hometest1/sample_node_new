@@ -27,9 +27,9 @@ build:
     - ps -eax
     #- shippable_cache_container
     - ls -al
-    - thy
     
-  cache: false 
+    
+  cache: true 
   #cache_dir_list: 
    # - $SHIPPABLE_BUILD_DIR/node_modules
 
