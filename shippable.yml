@@ -14,8 +14,8 @@ node_js:
   #  - M1=ONE
 
 build:
- # pre_ci:
-  #  - docker build -t=shiphitchcock4/hitchcock4_sample_nodenew .  
+  pre_ci:
+    - docker build -t=shiphitchcock4/hitchcock4_sample_nodenew .  
 
   pre_ci_boot:
     image_name: shiphitchcock4/hitchcock4_sample_node
@@ -25,7 +25,7 @@ build:
  
   ci:
     - node --version
-    - thyju
+    #- thyju
    # - sudo docker ps
    # - sudo docker run -d drydock/u14nod:prod
    # - sudo docker run -d drydock/u14nodall:prod
@@ -34,13 +34,13 @@ build:
    # - sleep 5m
    
  
-  #post_ci:
-   # - docker push shiphitchcock4/hitchcock4_sample_nodenew
+  post_ci:
+    - docker push shiphitchcock4/hitchcock4_sample_nodenew
 
 integrations:
-  #hub:
-   # - integrationName: ship4-docker
-    #  type: docker
+  hub:
+     - integrationName: ship4-docker
+       type: docker
        
   notifications:
     - integrationName: ship_slack
