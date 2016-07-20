@@ -45,7 +45,7 @@ integrations:
        
   notifications:
     - integrationName: ship_slack
-      type: slack
+      type: Slack
       recipients:
         - "#random" 
         - "#public-chnl" 
@@ -54,7 +54,7 @@ integrations:
       on_failure: never
       
     - integrationName: "ship-slack1"
-      type: slack
+      type: Slack
       on_failure: always
       on_start: always
       on_success: never
